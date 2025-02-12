@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "project" ALTER COLUMN "date_created" SET DEFAULT CURRENT_TIMESTAMP;
