@@ -1,0 +1,81 @@
+form{
+  width: auto;
+  margin: auto;
+}
+
+.formulaire{
+  margin-left: 375px;
+  margin-top: 70px;
+}
+
+.field{
+  border: none;
+}
+
+.femme{
+  margin-left: 88px;
+}
+
+.homme{
+  margin-left: 88px;
+}
+
+.titre{
+  border-bottom: 5px solid #000000;
+  padding-right: 265px;
+}
+
+.titre2{
+  border-bottom: 5px solid #000000;
+  padding-right: 350px;
+  margin-bottom: 10px;
+}
+
+label{
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.genre{
+  text-transform: none;;
+}
+
+input{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000000;
+  padding-right: 265px;
+  margin-top: 10px;
+}
+
+input:focus{
+  border-bottom: 1px solid #54a6b1;
+}
+
+.label_select{
+  border: none;
+}
+
+.input_date{
+  padding-right: 290px;
+}
+
+.contenu{
+  border: none;
+  border-bottom: 1px solid #000000;
+  width: 403px;
+  height: 15px;
+}
+
+.button{
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.button:hover{
+  background-color: white;
+  color: #000000;
+  border: 1px solid #000000;
+}

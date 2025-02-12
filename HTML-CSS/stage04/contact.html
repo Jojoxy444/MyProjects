@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1 class="nom">Joan Chenot</h1> 
+            <nav>
+                <ul>
+                    <li> <a href="about.html">About</a> </li>
+                    <li> <a href="contact.html">Contact</a> </li>
+                    <li> <a href="index.html">Projects</a> </li>
+                </ul>   
+            </nav>
+    </header>
+
+<main>
+<form>
+    <fieldset>
+        <legend class="titre">Personal informations</legend>
+        <label class="label_civility" for="civility">Civility</label>
+        <label class="genre" for="female">Female</label>
+        <input type="radio" id="female" name="female">
+        <label class="genre" for="male">Male</label>
+        <input type="radio" id="male" name="male"><br><br>
+        <label class="label_firstname" for="first name">Firstname</label><br>
+        <input type="text" id="first name" name="first name" placeholder="Complete this field"><br><br>
+        <label class="label_lastname" for="last name">Lastname</label><br>
+        <input type="text" id="last name" name="last name" placeholder="Complete this field"><br><br>
+        <label class="label_email" for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Complete this field"><br><br>
+        <label class="label_phone" for="phone">Phone number</label><br>
+        <input type="number" name="phone" id="phone" placeholder="Complete this field"><br><br>
+    </fieldset>
+    <fieldset>
+        <legend class="titre2">Message</legend>
+        <label class="label_subject" for="subject">Subject</label><br>
+        <select class="label_select" name="subject" id="subject">
+        <option value="work_proposal">Work proposal</option>
+        <option value="just_saying_hello">Just saying hello</option>
+        <option value="rendez-vous">Rendez-vous</option>
+        </select><br>
+        <label class="label_date" for="date">Current Date</label><br>
+        <input class="input_date" type="date" id="date" name="date"><br><br>
+        <label class="label_content" for="content">Content</label><br><br>
+        <textarea class="contenu" name="content" id="content"></textarea><br>
+        <input class="button" type="submit" value="Send it">
+    </fieldset>
+</form>
+</main>
+</body>
+</html>
