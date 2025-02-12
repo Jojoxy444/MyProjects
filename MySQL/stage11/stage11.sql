@@ -1,0 +1,1 @@
+select avg (weight) as Moyenne from pokemon where id = 245 or id = 244 or id = 243;

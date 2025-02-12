@@ -1,0 +1,1 @@
+select count(*) as nb from types inner join pokemon_types on pokemon_types.type_id = types.id where id = 15;

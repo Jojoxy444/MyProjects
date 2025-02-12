@@ -1,0 +1,1 @@
+select identifier as nom_stat, base_stat as nb from stats inner join pokemon_stats on pokemon_stats.stat_id = stats.id where pokemon_id = 150;

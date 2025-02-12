@@ -1,0 +1,1 @@
+SELECT identifier FROM pokemon where id between 133 and 136;

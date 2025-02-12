@@ -1,0 +1,1 @@
+SELECT * FROM pokemon where id = 25;

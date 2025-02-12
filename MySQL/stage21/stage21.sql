@@ -1,0 +1,1 @@
+select id as id, identifier as identifier from pokemon order by height asc limit 1;

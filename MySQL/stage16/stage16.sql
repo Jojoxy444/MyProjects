@@ -1,0 +1,1 @@
+select DATEDIFF (CURRENT_TIMESTAMP, "2016/11/23") as nbJours;

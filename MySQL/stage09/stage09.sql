@@ -1,0 +1,1 @@
+SELECT CASE WHEN EXISTS (SELECT 1 FROM pokemon JOIN pokemon_moves ON pokemon.id = pokemon_moves.pokemon_id JOIN moves ON pokemon_moves.move_id = moves.id WHERE pokemon.id = 160  AND moves.identifier = 'Hydro-pump') THEN 'hydro-pump' ELSE NULL END AS Attaques;

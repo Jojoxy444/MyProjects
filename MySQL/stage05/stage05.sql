@@ -1,0 +1,1 @@
+select identifier as attaque from moves inner join pokemon_moves on pokemon_moves.move_id = moves.id where pokemon_id = 143 limit 5;

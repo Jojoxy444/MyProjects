@@ -1,0 +1,1 @@
+SELECT identifier as TypeOeuf from egg_groups INNER JOIN pokemon_egg_groups ON pokemon_egg_groups.egg_group_id = egg_groups.id WHERE species_id=164;

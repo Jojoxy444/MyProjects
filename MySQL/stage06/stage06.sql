@@ -1,0 +1,1 @@
+select identifier as type from types inner join pokemon_types on pokemon_types.type_id = types.id where pokemon_id = 123;

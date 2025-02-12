@@ -1,0 +1,1 @@
+select id as type_id, count(pokemon_id) as nb from types inner join pokemon_types on pokemon_types.type_id = types.id group by id;

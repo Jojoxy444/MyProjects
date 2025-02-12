@@ -1,0 +1,1 @@
+SELECT COUNT(p.id) AS nb FROM pokemon AS p JOIN pokemon_types AS pt ON p.id = pt.pokemon_id JOIN types AS t ON pt.type_id = t.id JOIN pokemon_form_generations AS pfg ON p.id = pfg.pokemon_form_id WHERE t.identifier = 'steel' AND pfg.generation_id = 2;
