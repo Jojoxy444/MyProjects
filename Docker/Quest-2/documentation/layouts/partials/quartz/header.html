@@ -1,0 +1,10 @@
+<header class="book-header">
+    {{/*  <input type="checkbox" class="toggle" id="menu-control" />  */}}
+    <label for="menu-control">
+      <img src="{{ "svg/menu.svg" | relURL }}" class="book-icon" alt="Menu" />
+    </label>
+    <h1 id="page-title"><a href="{{ "" | absLangURL }}">{{ .Site.Params.Title }}</a></h1>
+    <div class="spacer"></div>
+    {{partial "quartz/darkmode" .}}
+</header>
+

@@ -1,0 +1,132 @@
+
+.container {
+  color: black;
+  padding-bottom: 15%;
+  padding-top: 10%;
+  font-family: 'Montserrat', sans-serif; 
+  background-image: url(/bg.jpg);
+background-size: cover;
+}
+
+.categories {
+  display: flex;
+  overflow-x: auto; 
+  scroll-behavior: smooth; 
+  -webkit-overflow-scrolling: touch; 
+  gap: 25px;
+  padding: 100px;
+  max-width: 90vw;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category {
+  text-decoration: none;
+  color: #ffffff;
+  min-width: 150px; 
+  padding: 10px; 
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.category::before {
+  content: '';
+  position: absolute;
+width: 100%;
+height: 2px;
+  background-color: #fbeb00;
+  bottom: -4px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.1s ease-in-out;
+}
+
+.category:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.category:hover {
+  color: #fbeb00;
+}
+
+.cardSubInfo {
+  display: flex;
+  align-items: center;
+}
+
+.propositionsContainer {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.proposition {
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #131212;
+  background-color: #ffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.proposition:hover {
+  transform: translateY(-5px);
+
+}
+
+.cardInfo {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardInfo h3 {
+  margin-bottom: 30px; 
+  font-size: 18px;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardInfo p {
+  font-weight: bold;
+}
+
+.cardInfo button {
+  background-color: #fbeb00;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .categories {
+    justify-content: center; 
+    margin-left: 70px;
+  }
+
+  .category {
+    white-space: nowrap; 
+    min-width: auto; 
+    padding: 0;
+    margin-right: 0;
+  }
+}

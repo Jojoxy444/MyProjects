@@ -1,0 +1,78 @@
+.propositionsSection {
+  padding: 50px;
+  text-align: flex-start;
+  color: black;
+background-color: #FDFFFC;
+  padding-bottom: 15%;
+  padding-top: 10%;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #131212;
+  background-color: #ffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardInfo {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.propositionsSection h1 {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cardInfo h3 {
+  margin-bottom: 30px; 
+  font-size: 18px;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardInfo p {
+  font-weight: bold;
+}
+
+.cardInfo button {
+  background-color: #fbeb00;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 40px;
+  font-size: 15px;
+}
+
+.cardSubInfo {
+  display: flex;
+  align-items: center;
+}

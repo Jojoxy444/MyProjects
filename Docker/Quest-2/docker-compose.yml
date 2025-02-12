@@ -1,0 +1,66 @@
+version: "3"
+
+services:
+  python-app:
+    build:
+      context: ./vote_app/vote
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    networks:
+      - back-end
+      - front-end
+    restart: unless-stopped
+
+  redis:
+    build:
+      context: ./redis
+    ports:
+      - "6379:6379"
+    networks:
+      - back-end
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ./vote_app/worker
+    networks:
+      - back-end
+    restart: unless-stopped
+
+  db:
+    build:
+      context: ./postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - back-end
+    restart: unless-stopped
+
+  javascript-app:
+    build:
+      context: ./vote_app/result
+    ports:
+      - "4000:4000"
+    networks:
+      - back-end
+      - front-end
+    restart: unless-stopped
+
+  hugo:
+    build:
+      context: ./documentation
+    ports:
+      - "1313:1313"
+    networks:
+      - internal
+    restart: unless-stopped
+
+networks:
+  back-end:
+    driver: bridge
+  front-end:
+    driver: bridge
+  internal:
+    driver: bridge

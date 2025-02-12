@@ -1,0 +1,221 @@
+.header {
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.scrolled {
+  backdrop-filter: blur(15px);
+  background-color: #1a1a1ada; 
+  transition: background-color 0.2s ease-in-out;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; 
+}
+
+.logo {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 170px;
+}
+
+.accountWrapper {
+  display: flex;
+}
+
+.accountMenu {
+  position: absolute;
+  top: 70%; 
+  right: 0;
+  background-color: #131212;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1001; 
+}
+
+.accountMenuItem {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  position: relative;
+  margin: 10px  0;
+}
+
+.accountMenuItem::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fbeb00;
+  bottom: -4px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.1s ease-in-out;
+}
+
+.accountMenuItem:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.accountMenuItem:hover {
+  color: #fbeb00;
+}
+
+.accountMenuItem:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.accountToggle {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+ 
+.navbarList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.navItem {
+  margin-right: 20px;
+}
+
+.navbarLink {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  position: relative;
+}
+
+.navbarLink::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fbeb00;
+  bottom: -4px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.1s ease-in-out;
+}
+
+.navbarLink:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navbarLink:hover {
+  color: #fbeb00;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerBtnGroup {
+  display: flex;
+  align-items: center;
+}
+
+.SignUpBtn {
+  border: 2px solid #fbeb00;
+  background-color: transparent;
+  color: #fbeb00;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.SignUpBtn:hover {
+  background-color: #fbeb00;
+  color: #131212;
+}
+
+.navToggleBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #ffffff;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navToggleBtn {
+    display: block;
+  }
+
+  .accountWrapper {
+    margin-left: 40vw;
+  }
+
+  .accountMenu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: #131212;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbarList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: #131212;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbarList.open {
+    display: flex;
+  }
+
+  .navItem {
+    margin: 10px 0;
+  }
+
+  .SignUpBtn {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbarList {
+    justify-content: center;
+  }
+
+  .SignUpBtn {
+    margin-left: 20px;
+  }
+}

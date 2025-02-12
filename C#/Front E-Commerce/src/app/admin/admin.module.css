@@ -1,0 +1,181 @@
+.productContainer {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  padding-top: 5%;
+  background-color: #1d201f;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productList {
+  padding: 20px;
+  color: #1d201f;
+}
+
+.productWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  background-color: white;
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.cardContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cardName {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cardPrice {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+}
+
+.plusSign {
+  font-size: 24px;
+  color: #666;
+}
+
+.cardActions {
+  display: flex;
+  gap: 10px;
+  margin-left: 50%;
+}
+
+.editBtn,
+.deleteBtn {
+  font-size: 12px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.editBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+.addCard {
+  width: 200px;
+  height: 150px;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.plusSign {
+  font-size: 24px;
+  color: #666;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  outline: none;
+  color: black;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h2 {
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modalBody {
+  margin-top: 20px;
+}
+
+.modalBody label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modalBody input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 80%;
+  }
+
+  .productContainer {
+    padding-top: 20%;
+  }
+}

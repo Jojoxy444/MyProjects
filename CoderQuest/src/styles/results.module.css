@@ -1,0 +1,60 @@
+.container {
+    display: grid;
+    justify-content: space-between;
+    overflow-y: none;
+    height: 100vh;
+
+}
+
+.chartWrapper {
+    width: 50%;
+    height: 55%;
+ }
+  
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+}
+  
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#radarChart {
+    height: 10%;
+    width: 10%;
+}
+
+.radarchat_container {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 800px; 
+    height: 800px; 
+}
+
+.Backbutton {
+    position: absolute;
+    bottom: 1%;
+    right: 60%;
+    left: 40%;
+    height: 55px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 19px;
+    margin-left: 4%;
+    margin-top: 4%;
+    cursor: pointer;
+    border:none;
+}
+
+
+.Backbutton:hover {
+    background-color: #4a5c6a;
+    color: white;
+}

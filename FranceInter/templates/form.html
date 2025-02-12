@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FranceInter</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Backoffice Form</h1>
+    <form id="uploadForm" method="post" enctype="multipart/form-data">
+      <label for="text">Texte</label>
+      <input type="text" name="text" placeholder="Entre un texte" required />
+      <label for="number">Limite de personne autorisé</label>
+      <input
+        type="number"
+        name="number"
+        placeholder="Entrer un nombre"
+        required
+      />
+      <label for="image">Image</label>
+      <input type="file" name="image" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("uploadForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let form = document.getElementById("uploadForm");
+          let fileInput = document.querySelector('input[name="image"]');
+          let file = fileInput.files[0];
+
+          if (file) {
+            let validFormats = ["image/jpeg", "image/png"];
+            if (!validFormats.includes(file.type)) {
+              alert(
+                "Veuillez chosir une image avec un format correct (JPG ou PNG)"
+              );
+              return;
+            }
+          } else {
+            alert(
+              "Veuillez choisir une image avec un format correct (JPG ou PNG)"
+            );
+            return;
+          }
+
+          let formData = new FormData(this);
+          form.reset();
+
+          fetch("/submit", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (
+                data.people_detected >
+                document.querySelector('input[name="number"]').value
+              ) {
+                let frenchAudio = new Audio(data.french_speech_file);
+                frenchAudio.play();
+
+                frenchAudio.onended = function () {
+                  let englishAudio = new Audio(data.english_speech_file);
+                  englishAudio.play();
+                };
+              }
+            })
+            .catch((error) => console.error("Error:", error));
+        });
+    </script>
+  </body>
+</html>

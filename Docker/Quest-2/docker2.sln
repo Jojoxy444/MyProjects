@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vote_app", "vote_app", "{D4EAE24C-2B7D-48D5-82A9-946CA4A46124}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "vote_app\worker\Worker.csproj", "{E409B09D-7540-4FB6-BCCA-AA68FBC5A76F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E409B09D-7540-4FB6-BCCA-AA68FBC5A76F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E409B09D-7540-4FB6-BCCA-AA68FBC5A76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E409B09D-7540-4FB6-BCCA-AA68FBC5A76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E409B09D-7540-4FB6-BCCA-AA68FBC5A76F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E409B09D-7540-4FB6-BCCA-AA68FBC5A76F} = {D4EAE24C-2B7D-48D5-82A9-946CA4A46124}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27289C8B-43CD-42F7-958B-BD3B10059988}
+	EndGlobalSection
+EndGlobal

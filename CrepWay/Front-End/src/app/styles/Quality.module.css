@@ -1,0 +1,45 @@
+.qualitySection {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 20px 0; 
+    background-color: #fbeb00; 
+    font-family: 'Montserrat', sans-serif; 
+  }
+  
+  .qualityContainer {
+    display: flex;
+  }
+  
+  .qualityItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 50px; 
+  }
+  
+  .qualityItem img {
+    width: 34px; 
+    margin-right: 10px;
+  }
+  
+  .qualityItem p {
+    font-weight: bold; 
+    color: #000000;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .qualityItem img {
+      width: 20px; 
+    }
+  
+    .qualityItem{
+        margin: 0 10px;
+    }
+
+    .qualityItem p {
+      font-size: 10px; 
+    }
+  }
+  

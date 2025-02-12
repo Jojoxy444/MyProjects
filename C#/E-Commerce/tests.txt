@@ -1,0 +1,62 @@
+// Route Get un Utilisateur avec son ID
+
+curl -X GET http://localhost:9999/api/users/1 \
+-H "Authorization: Bearer TokenJWT"
+
+
+// Route Update un Utilisateur
+
+curl -X PUT http://localhost:9999/api/users/update/1 \
+-H "Authorization: Bearer TokenJWT" \
+-H "Content-Type: application/json" \
+-d '{
+  "email": "joan.chenot@hotmail.com",
+  "password": "jojoxy",
+  "role": "admin"
+}'
+
+
+// Route Delete un Utilisateur
+
+curl -X DELETE http://localhost:9999/api/users/delete/1 \
+-H "Authorization: Bearer TokenJWT"
+
+
+// Route Create un Produit
+
+curl -X POST "http://localhost:9999/api/products/create" \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer TokenJWT" \
+-d '{
+    "Name": "Nom du Produit",
+    "Price": 99.99,
+    "Description": "Description du produit"
+}'
+
+
+// Route Update un Produit
+
+curl -X PUT "http://localhost:9999/api/products/update/ID" \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer TokenJWT" \
+-d '{
+    "Name": "Nom du Produit Modifié",
+    "Price": 89.99,
+    "Description": "Description mise à jour"
+}'
+
+
+// Route Delete un Produit
+
+curl -X DELETE "http://localhost:9999/api/products/delete/ID" \
+-H "Authorization: Bearer TokenJWT"
+
+
+// Route pour ajouter un Produit au Panier de l'Utilisateur
+
+curl -X POST "http://localhost:9999/api/paniers/add/ID" -H "Authorization: Bearer TokenJWT"
+
+
+// Route Delete un Produit du Panier de l'Utilisateur
+
+curl -X POST "http://localhost:9999/api/paniers/remove/ID" -H "Authorization: Bearer TokenJWT"

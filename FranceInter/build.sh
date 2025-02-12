@@ -1,0 +1,1 @@
+pip3 install flask azure-cognitiveservices-vision-computervision azure-cognitiveservices-speech azure-ai-textanalytics azure-ai-translation-text --break-system-packages

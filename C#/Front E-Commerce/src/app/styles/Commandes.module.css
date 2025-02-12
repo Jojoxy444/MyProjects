@@ -1,0 +1,97 @@
+.ordersContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 50px;
+  justify-content: center;
+}
+
+.orderBlock {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: calc(20% - 30px); 
+  margin-right: 20px; 
+  position: relative;
+}
+
+.orderNumber {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.orderItems {
+  list-style: none;
+  padding: 0;
+  margin: 1;
+}
+
+.orderItems li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.orderPrice {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.commande {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.Modalitems {
+  list-style-type: none; 
+  padding-top: 1rem;
+  padding-left: 2rem; 
+  text-align: left; 
+  color: gray;
+}
+
+.containerModalprice {
+  display: flex;
+  text-align: left;
+  padding-left: 0.5rem;
+  flex-direction: row;
+}
+
+.Modalprice {
+  font-weight: bold;
+}
+
+.localisations {
+  padding-top: 10px;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .orderBlock {
+    width: calc(33.33% - 30px); 
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .orderBlock {
+    width: calc(50% - 30px); 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .orderBlock {
+    width: calc(100% - 30px); 
+    margin-right: 0; 
+  }
+}

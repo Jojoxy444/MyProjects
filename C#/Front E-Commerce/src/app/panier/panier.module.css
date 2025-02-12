@@ -1,0 +1,157 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color: #1d201f;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.orderDetails {
+  max-width: 700px;
+}
+
+.centerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orderedItems {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.item {
+  width: 700px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemHeader p {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.itemName {
+  display: flex;
+  font-weight: bold;
+}
+
+.arrow {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+}
+
+.quantityBtn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.quantity {
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.deleteBtn {
+  border: none;
+  background-color: #ff4b4b;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.deleteBtn:hover {
+  background-color: #ff3333;
+}
+
+.ingredientsList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ingredient {
+  margin-bottom: 20px;
+}
+
+.totalPriceText {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.totalPriceContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.centerBlock button {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.backLink {
+  border: 2px solid #ad8959;
+  background-color: transparent;
+  color: #ad8959;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.backLink:hover {
+  background-color: #fbeb00;
+  color: #131212;
+}
+
+.noCommandMessage {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    width: 70vw;
+  }
+}
