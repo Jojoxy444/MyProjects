@@ -1,0 +1,1 @@
+insert into users (username, email, password) values ("johndoe", "john@beluga.uk", "jspjpp");
